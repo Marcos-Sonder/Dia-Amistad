@@ -1,0 +1,1120 @@
+/*==================================================
+                RESET GENERAL
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#090909;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/*==================================================
+            BARRA DE SCROLL
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0d0d0d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(#7b2cff,#2d7dff);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#9f5cff;
+
+}
+
+/*==================================================
+            FONDO ANIMADO
+==================================================*/
+
+.background{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    background:
+    radial-gradient(circle at top left,#4323a7 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#1555ff 0%,transparent 35%),
+    linear-gradient(180deg,#050505,#111,#0b0b25);
+
+    z-index:-5;
+
+}
+
+/*==================================================
+            PARTICULAS
+==================================================*/
+
+.particles{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background-image:
+
+    radial-gradient(rgba(255,255,255,.45) 2px,transparent 2px);
+
+    background-size:70px 70px;
+
+    opacity:.25;
+
+    animation:moverParticulas 25s linear infinite;
+
+    pointer-events:none;
+
+    z-index:-4;
+
+}
+
+@keyframes moverParticulas{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-400px);
+
+    }
+
+}
+
+/*==================================================
+                LOADER
+==================================================*/
+
+#loader{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100vh;
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-box{
+
+    text-align:center;
+
+}
+
+.loader-heart{
+
+    font-size:70px;
+
+    animation:latido 1s infinite;
+
+}
+
+.loader-box h2{
+
+    margin-top:20px;
+
+    color:#b890ff;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+@keyframes latido{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==================================================
+                    HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:url("img/portada.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.60);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+
+    max-width:900px;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 25px;
+
+    background:rgba(123,44,255,.25);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:30px;
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    color:#ffffff;
+
+    text-shadow:0 0 30px #6d43ff;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    line-height:38px;
+
+    color:#dddddd;
+
+    margin-bottom:45px;
+
+}
+
+/*==================================================
+            BOTON PRINCIPAL
+==================================================*/
+
+.btnPrincipal{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#7b2cff,#2d7dff);
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+    box-shadow:0 0 25px rgba(125,80,255,.5);
+
+}
+
+.btnPrincipal:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 45px rgba(125,80,255,.9);
+
+}
+
+/*==================================================
+                MUSICA
+==================================================*/
+
+.musica{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+#btnMusic{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#6f2dff,#1e8fff);
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+#btnMusic:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 30px rgba(125,80,255,.8);
+
+}
+
+/*==================================================
+                    CARTA
+==================================================*/
+
+.carta{
+
+    width:90%;
+
+    max-width:950px;
+
+    margin:100px auto;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
+
+}
+
+.carta h2{
+
+    text-align:center;
+
+    color:#b785ff;
+
+    font-size:42px;
+
+    margin-bottom:35px;
+
+}
+
+.carta p{
+
+    font-size:20px;
+
+    line-height:38px;
+
+    color:#ececec;
+
+    margin-bottom:22px;
+
+    text-align:justify;
+
+}
+
+.firma{
+
+    margin-top:40px;
+
+    text-align:right !important;
+
+    color:#79a8ff !important;
+
+    font-weight:bold;
+
+    font-size:24px !important;
+
+}
+
+
+/*==================================================
+                    FRASE
+==================================================*/
+
+.frase{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:100px auto;
+
+    text-align:center;
+
+}
+
+.frase h2{
+
+    font-size:36px;
+
+    color:#ffffff;
+
+    font-style:italic;
+
+    line-height:55px;
+
+    text-shadow:0 0 20px rgba(120,80,255,.7);
+
+}
+
+
+/*==================================================
+                    GALERÍA
+==================================================*/
+
+.galeria{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+.galeria h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#b785ff;
+
+    margin-bottom:50px;
+
+}
+
+.gridFotos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+}
+
+.foto{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:3px solid rgba(255,255,255,.15);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+
+    cursor:pointer;
+
+    transition:.5s;
+
+}
+
+.foto:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 35px rgba(124,92,255,.8);
+
+}
+
+.foto img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.foto:hover img{
+
+    transform:scale(1.12);
+
+}
+
+
+/*==================================================
+                    LIGHTBOX
+==================================================*/
+
+#lightbox{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:rgba(0,0,0,.95);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+}
+
+#lightbox img{
+
+    width:85%;
+
+    max-width:900px;
+
+    border-radius:20px;
+
+    border:4px solid white;
+
+}
+
+#cerrar{
+
+    position:absolute;
+
+    top:30px;
+
+    right:45px;
+
+    font-size:55px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+/*==================================================
+                    VIDEO
+==================================================*/
+
+.video{
+
+    width:90%;
+
+    max-width:950px;
+
+    margin:120px auto;
+
+    text-align:center;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.video h2{
+
+    font-size:38px;
+
+    color:#b785ff;
+
+    margin-bottom:25px;
+
+}
+
+.video p{
+
+    font-size:20px;
+
+    color:#dddddd;
+
+    margin-bottom:35px;
+
+}
+
+.btnVideo{
+
+    display:inline-block;
+
+    padding:18px 45px;
+
+    border-radius:45px;
+
+    background:linear-gradient(45deg,#7b2cff,#2d7dff);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+    box-shadow:0 0 25px rgba(124,92,255,.5);
+
+}
+
+.btnVideo:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 45px rgba(124,92,255,.9);
+
+}
+
+/*==================================================
+                MENSAJE FINAL
+==================================================*/
+
+.mensajeFinal{
+
+    width:90%;
+
+    max-width:950px;
+
+    margin:120px auto;
+
+    padding:60px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+
+}
+
+.mensajeFinal h2{
+
+    font-size:42px;
+
+    color:#b785ff;
+
+    margin-bottom:30px;
+
+}
+
+.mensajeFinal p{
+
+    font-size:21px;
+
+    line-height:38px;
+
+    color:#eeeeee;
+
+}
+
+.corazon{
+
+    margin-top:35px;
+
+    font-size:70px;
+
+    animation:latidoCorazon 1.2s infinite;
+
+}
+
+@keyframes latidoCorazon{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==================================================
+                    FOOTER
+==================================================*/
+
+footer{
+
+    width:100%;
+
+    padding:45px 20px;
+
+    margin-top:100px;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.65);
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+}
+
+footer h3{
+
+    font-size:28px;
+
+    color:#b785ff;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:#cccccc;
+
+    font-size:18px;
+
+}
+
+/*==================================================
+            BOTON VOLVER ARRIBA
+==================================================*/
+
+#btnTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(45deg,#7b2cff,#2d7dff);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    transition:.4s;
+
+    z-index:999;
+
+    box-shadow:0 0 20px rgba(124,92,255,.6);
+
+}
+
+#btnTop:hover{
+
+    transform:translateY(-5px) scale(1.1);
+
+}
+
+/*==================================================
+                ANIMACIONES
+==================================================*/
+
+.hero-content{
+
+    animation:entradaHero 1.3s ease;
+
+}
+
+@keyframes entradaHero{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.carta,
+.frase,
+.galeria,
+.video,
+.mensajeFinal{
+
+    animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+            EFECTOS GENERALES
+==================================================*/
+
+button,
+a{
+
+    transition:.35s;
+
+}
+
+img{
+
+    user-select:none;
+
+}
+
+section{
+
+    position:relative;
+
+}
+
+/*==================================================
+            RESPONSIVE TABLET
+==================================================*/
+
+@media(max-width:992px){
+
+.hero h1{
+
+    font-size:50px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+}
+
+.carta{
+
+    padding:40px;
+
+}
+
+.carta p{
+
+    font-size:19px;
+
+}
+
+.video{
+
+    padding:40px;
+
+}
+
+}
+
+/*==================================================
+            RESPONSIVE MOVIL
+==================================================*/
+
+@media(max-width:768px){
+
+.hero{
+
+    height:90vh;
+
+}
+
+.badge{
+
+    font-size:13px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+    line-height:30px;
+
+}
+
+.btnPrincipal{
+
+    font-size:17px;
+
+    padding:15px 30px;
+
+}
+
+.carta{
+
+    width:95%;
+
+    padding:28px;
+
+}
+
+.carta h2{
+
+    font-size:30px;
+
+}
+
+.carta p{
+
+    font-size:17px;
+
+    line-height:32px;
+
+}
+
+.frase h2{
+
+    font-size:25px;
+
+    line-height:40px;
+
+}
+
+.galeria h2{
+
+    font-size:32px;
+
+}
+
+.video{
+
+    width:95%;
+
+    padding:28px;
+
+}
+
+.video h2{
+
+    font-size:30px;
+
+}
+
+.video p{
+
+    font-size:17px;
+
+}
+
+.btnVideo{
+
+    font-size:17px;
+
+    padding:15px 28px;
+
+}
+
+.mensajeFinal{
+
+    width:95%;
+
+    padding:30px;
+
+}
+
+.mensajeFinal h2{
+
+    font-size:30px;
+
+}
+
+.mensajeFinal p{
+
+    font-size:17px;
+
+    line-height:30px;
+
+}
+
+footer h3{
+
+    font-size:22px;
+
+}
+
+footer p{
+
+    font-size:15px;
+
+}
+
+#btnTop{
+
+    width:50px;
+
+    height:50px;
+
+    font-size:18px;
+
+}
+
+}
+
+/*==================================================
+            FIN DEL CSS
+==================================================*/
+
+
