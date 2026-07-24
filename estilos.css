@@ -174,7 +174,16 @@ body{
 
     letter-spacing:2px;
 
+    font-size:clamp(18px,5vw,25px);
+
+    max-width:90vw;
+
+    text-align:center;
+
+    overflow-wrap:break-word;
+
 }
+
 
 @keyframes latido{
 
@@ -683,6 +692,41 @@ body{
     transform:translateY(-6px);
 
     box-shadow:0 0 45px rgba(124,92,255,.9);
+
+}
+/* CORRECCIÓN VIDEO EN CELULAR */
+
+.video *{
+
+    max-width:100%;
+
+}
+
+
+.video video{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:20px;
+
+}
+
+
+@media(max-width:768px){
+
+    .video{
+
+        width:95%;
+
+        padding:20px;
+
+        margin:80px auto;
+
+    }
 
 }
 /*==================================================
